@@ -1,6 +1,6 @@
-package com.example.examplemod.platform;
+package games.enchanted.norocketboosting.platform;
 
-import com.example.examplemod.platform.services.IPlatformHelper;
+import games.enchanted.norocketboosting.platform.services.IPlatformHelper;
 import net.fabricmc.loader.api.FabricLoader;
 
 public class FabricPlatformHelper implements IPlatformHelper {
