@@ -1,5 +1,7 @@
 package games.enchanted.norocketboosting.platform.services;
 
+import net.minecraft.world.level.GameRules;
+
 public interface IPlatformHelper {
 
     /**
@@ -30,7 +32,17 @@ public interface IPlatformHelper {
      * @return The name of the environment type.
      */
     default String getEnvironmentName() {
-
         return isDevelopmentEnvironment() ? "development" : "production";
     }
+
+    /**
+     * Register a gamerule
+     */
+    <T extends GameRules.Value<T>> GameRules.Key<T> registerGameRule(String ruleName, GameRules.Category ruleCategory, GameRules.Type<T> ruleType);
+
+
+    /**
+     * Create a booleam gamerule type
+     */
+    GameRules.Type<GameRules.BooleanValue> basicBooleanRuleType(Boolean defaultValue);
 }
