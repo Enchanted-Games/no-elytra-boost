@@ -1,6 +1,20 @@
 # No Rocket Boost
 No Rocket Boost is a Minecraft mod that aims to balance elytra by removing rocket boosting and adding back punch bow boosting.
 
+## Configuration
+This mod is configured using gamerules. You can set these by using the `/gamerule` command or by setting them in the Game Rules screen when creating a world.
+
+### `eg_EnableElytraRocketBoosting`
+- Enables or disables elytra rocket boosting.
+- When set to `false`, players can use rockets to boost themselves while flying.
+- When set to `true`, players won't be able to use rockets to boost.
+
+### `eg_EnablePunchBowBoosting`
+- Enables or disables elytra punch bow boosting.
+- When set to `false`, the vanilla behaviour for arrows hitting their shooter is used.
+- When set to `true`, arrows can hit their shooter while flying with an elytra if some conditions are met. [See the code](https://github.com/Enchanted-Games/no-elytra-boost/blob/1.20.6/common/src/main/java/games/enchanted/norocketboosting/mixin/ProjectileMixin.java#L30) if you want to know exactly how this works
+- This doesn't work exactly how it did in 1.9/1.10, however, I have tried to make it feel pretty similar
+
 ## Installation
 The mod has to be installed on the server side in order to work. 
 
