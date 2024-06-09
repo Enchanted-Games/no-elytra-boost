@@ -89,7 +89,8 @@ processResources {
             "mod_version": mod_version,
             "mod_issues": mod_issues,
             "mod_source": mod_source,
-            "mod_homepage": mod_homepage
+            "mod_homepage": mod_homepage,
+            "minecraft_version_range_fabric": minecraft_version_range_fabric
     ]
 
     filesMatching(['pack.mcmeta', 'fabric.mod.json', 'META-INF/mods.toml', 'META-INF/neoforge.mods.toml', '*.mixins.json']) {
